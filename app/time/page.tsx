@@ -1,6 +1,10 @@
 
 const getTime = async () => {
-  const response = await fetch('http://worldtimeapi.org/api/timezone/Europe/Copenhagen');
+  const response = await fetch('http://worldtimeapi.org/api/timezone/Europe/Copenhagen', {
+    next: {
+      tags: ['time'],
+    },
+  });
   const data = await response.json();
   return data.datetime as string;
 }
