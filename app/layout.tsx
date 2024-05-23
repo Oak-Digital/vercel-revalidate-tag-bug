@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 const getTime = async () => {
   const response = await fetch('http://worldtimeapi.org/api/timezone/Europe/Copenhagen', {
     next: {
-      // tags: ['time'],
+      tags: ['time'],
     },
   });
   const data = await response.json();
